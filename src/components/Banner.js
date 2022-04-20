@@ -10,7 +10,7 @@ function Banner() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await apiService.get(requests.fetchNetflixOriginals);
+      const response = await apiService.get(requests.fetchTrending);
       setMovie(
         response.data.results[
           Math.floor(Math.random() * response.data.results.length)
