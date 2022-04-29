@@ -8,10 +8,8 @@ import {
   Stack,
   Rating,
   Divider,
-  Breadcrumbs,
-  Link,
 } from "@mui/material";
-import { Link as RouterLink, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import LoadingScreen from "../components/LoadingScreen";
 import { Alert } from "@mui/material";
 import requests from "../requests";

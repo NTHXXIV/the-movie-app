@@ -1,10 +1,9 @@
 import * as React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import AuthRequire from "./AuthRequire";
 import LoginScreen from "../components/screens/LoginScreen";
 import HomeScreen from "../components/screens/HomeScreen";
 import ProfileScreen from "../components/screens/ProfileScreen";
-import MovieModal from "../components/MovieModal";
 import MovieDetails from "../components/MovieDetails";
 import "../style/index.css";
 
