@@ -6,10 +6,8 @@ import "../style/Row.css";
 import requests from "../requests";
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { set } from "lodash";
 import { addToFavorite } from "../app/localData";
 import PlayCircleFilledOutlinedIcon from "@mui/icons-material/PlayCircleFilledOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
@@ -38,7 +36,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
   const [loadingModal, setLoadingModal] = useState(false);
   const [movie, setMovie] = useState();
   const [open, setOpen] = React.useState(false);
-  const [error, setError] = useState();
 
   const { currentUser } = useAuth();
 
@@ -80,7 +77,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
     setMovie(movie);
     setOpen(true);
     setLoadingModal(true);
-    setError("");
     try {
       const response = await apiService(
         requests({ movieId: movie.id }).fetchYoutubeVideo
@@ -104,7 +100,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
         setLoadingModal(false);
       });
 
-      setError(error.response.data.status_message);
+      // setError(error.response.data.status_message);
     }
   };
 

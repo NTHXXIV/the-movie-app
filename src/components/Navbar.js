@@ -13,15 +13,12 @@ import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined
 import apiService from "../app/apiService";
 import requests from "../requests";
 import LoadingScreen from "./LoadingScreen";
-import { Alert } from "@mui/material";
-import { Stack } from "@mui/material";
 
 function Navbar({ genres, setGenres }) {
   const [show, handleShow] = useState(false);
   let navigate = useNavigate();
   const [genresList, setGenresList] = useState();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [anchorGenres, setAnchorGenres] = useState(null);
@@ -61,10 +58,8 @@ function Navbar({ genres, setGenres }) {
       try {
         const res = await apiService(requests().genresList);
         setGenresList(res.data.genres);
-        setError("");
       } catch (error) {
         console.log(error);
-        setError(error.message);
       }
       setLoading(false);
     };
@@ -169,9 +164,6 @@ function Navbar({ genres, setGenres }) {
                 <Typography>{e.name}</Typography>
               </MenuItem>
             ))
-            // {!genresList && (
-            //   <Typography variant="h6">404 Product not found</Typography>
-            // )}
           )}
         </Menu>
       </Box>
