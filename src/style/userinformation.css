@@ -1,0 +1,32 @@
+.ui {
+  display: flex;
+  padding: 1rem;
+  padding-top: 50px;
+  width: 100vw;
+  background: url("https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg")
+    center no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+
+.ui__avatar {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 4px solid #c14343;
+}
+
+.ui__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ui__content > p {
+  display: block;
+  font-size: 1.5rem;
+  color: red;
+  font-weight: 600;
+  font-style: italic;
+  text-shadow: 1px 2px #c14343;
+}

@@ -17,14 +17,22 @@
 
 .nav__logo {
   position: fixed;
-  left: 20px;
+  left: 2rem;
   width: 80px;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .nav__avatar {
   position: fixed;
-  right: 20px;
+  right: 3rem;
   width: 30px;
+  top: 10px;
   object-fit: contain;
+}
+
+.nav__browser {
+  position: fixed;
+  left: 8rem;
+  color: white;
 }
